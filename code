@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Load the data containing information about shelters
+data = pd.read_csv('shelters_data.csv')  # Replace 'shelters_data.csv' with the actual filename or path
+
+# Filter the data for Ukraine
+ukraine_shelters = data[data['country'] == 'Ukraine']
+
+# Calculate the number of shelters
+num_shelters = len(ukraine_shelters)
+
+# Print the result
+print("Number of shelters in Ukraine:", num_shelters)
